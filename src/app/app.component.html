@@ -1,4 +1,4 @@
-<ng-container *ngIf="href != ''">
+<ng-container *ngIf="url != ''">
   <mat-toolbar>
     <div class="container-fluid">
       <div class="row">
@@ -50,43 +50,37 @@
   <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
       <mat-list>
-        <a href="/dashboard">
-
-          <mat-list-item>
-            <span class="material-symbols-outlined">
+        <mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+            <span class="material-symbols-outlined me-3">
               leaderboard
             </span>
             <div [translate]="'Dashboard'"></div>
-          </mat-list-item>
-        </a>
-
-        <a href="/database">
-          <mat-list-item>
-            <span class="material-symbols-outlined">
+        </mat-list-item>
+        <mat-list-item [routerLink]="['/database']" routerLinkActive="active">
+            <span class="material-symbols-outlined me-3">
               description
             </span>
             <div [translate]="'Database'"></div>
-          </mat-list-item>
-        </a>
+        </mat-list-item>
 
         <mat-list-item>
-          <span class="material-symbols-outlined">
+          <span class="material-symbols-outlined me-3">
             assignment
           </span>
           <div [translate]="'Form management'"></div>
         </mat-list-item>
         <mat-list-item>
-          <span class="material-symbols-outlined">
+          <span class="material-symbols-outlined me-3">
             badge
           </span>
           <div [translate]="'Admin management'"></div>
         </mat-list-item>
         <mat-list-item>
-          <span class="material-symbols-outlined">
+          <span class="material-symbols-outlined me-3">
             history
           </span>
           <div [translate]="'Activity record'"></div>
-          </mat-list-item>
+        </mat-list-item>
       </mat-list>
     </mat-drawer>
     <mat-drawer-content>
@@ -99,6 +93,6 @@
     ©2023 Vathanagul group.co.ltd
   </footer>
 </ng-container>
-<ng-container *ngIf="href == ''">
+<ng-container *ngIf="url == ''">
   <app-login></app-login>
 </ng-container>

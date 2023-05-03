@@ -8,7 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public href: string = "";
+  public hrefs: string = "";
+  url:any = ""
   translate: TranslateService;
   constructor(
     private route: ActivatedRoute,
@@ -20,8 +21,9 @@ export class AppComponent implements OnInit {
   }
   language:any
   ngOnInit() {
-    this.href = this.Location.path()
+    this.url = this.Location.path()
     this.language = this.translate
+    console.log(this.url == '/dashboard')
   }
   title = 'POSM';
   Logout() {

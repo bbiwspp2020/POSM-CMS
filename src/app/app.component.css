@@ -8,12 +8,29 @@
 
 .example-container {
     width: 100%;
+    background-color: #FFFFFF;
     /* min-height: calc(100vh - 100px) */
 }
 
 mat-drawer {
     width: 300px;
     background-color: #F8F8F8;
+}
+
+mat-list-item{
+    margin-top: 2em;
+}
+mat-list-item:hover{
+    color: #388087;
+    border: 1px solid #388087;
+    margin-top: 2em;
+    cursor: pointer;
+}
+.active{
+    color: #388087;
+    font-weight: bolder;
+    margin-top: 2em;
+    cursor: pointer;
 }
 
 mat-toolbar {
@@ -67,4 +84,8 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: #388087;
+}
+
+a{
+    text-decoration: none;
 }

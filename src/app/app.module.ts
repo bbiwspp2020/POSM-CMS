@@ -12,9 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { DatabaseComponent } from './database/database.component';
+import { DatabaseComponent } from './pages/database/database.component';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSliderModule } from '@angular/material/slider';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -35,13 +40,18 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatMenuModule,
     MatListModule,
     HttpClientModule,
+    NgApexchartsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-    }
-    })
+      }
+    }),
+    MatNativeDateModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

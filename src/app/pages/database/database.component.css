@@ -1,0 +1,23 @@
+.select-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-item>span>u {
+    cursor: pointer;
+}
+.select-item>span>u:hover {
+    color: #388087;
+}
+
+.background{
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 2em 0;
+}
+
+mat-slider {
+    width: 100%;
+  }
