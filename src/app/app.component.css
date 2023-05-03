@@ -1,0 +1,57 @@
+.btn-light {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.example-container {
+    width: 100%;
+    max-height: calc(100vh - 100px)
+}
+
+mat-drawer {
+    width: 300px;
+    background-color: #F8F8F8;
+}
+
+mat-toolbar {
+    width: 100%;
+    height: 100px;
+    background-color: #388087;
+    color: #FFF;
+}
+
+mat-drawer-content {
+    padding-top: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+::ng-deep .profile{
+    border-radius: 40px;
+    border: none;
+    padding: 7px 25px;
+    display: flex;
+    align-items: center;
+}
+::ng-deep .language{
+    background-color: #388087;
+    border: #388087;
+    color: #FFF;
+}
+.dropdown-profile{
+    background-color: #F8F8F8;
+}
+
+.badge{
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 30px;
+    background-color: #DEF3F5 !important;
+}
+.text-name{
+    font-weight: 600;
+    font-size: 20px !important;
+}
