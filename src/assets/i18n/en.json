@@ -5,5 +5,17 @@
     "Database":"Database",
     "Form management":"Form management",
     "Admin management":"Admin management",
-    "Activity record":"Activity record"
+    "Activity record":"Activity record",
+    
+
+    "Export":"Export",
+    "View on Map":"View on Map",
+    "Merchant in Database":"Merchant in Database",
+    "New today":"New today",
+    "This week":"This week",
+    "This month":"This month",
+    "This year":"This year",
+    "Total merchant":"Total merchant",
+
+    "Category":"Category"
   }

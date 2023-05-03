@@ -5,5 +5,22 @@
     "Database":"ฐานข้อมูล",
     "Form management":"การจัดการแบบฟอร์ม",
     "Admin management":"การจัดการผู้ดูแลระบบ",
-    "Activity record":"บันทึกกิจกรรม"
+    "Activity record":"บันทึกกิจกรรม",
+
+
+    "Export":"ส่งออก",
+    "View on Map":"ดูบนแผนที่",
+    "Merchant in Database":"ผู้ค้าในฐานข้อมูล",
+    "New today":"วัน",
+    "This week":"สัปดาห์",
+    "This month":"เดือน",
+    "This year":"ปี",
+    "Total merchant":"ผู้ค้าทั้งหมด",
+
+    "Category":"หมวดหมู่"
+
+
+
+
+
   }

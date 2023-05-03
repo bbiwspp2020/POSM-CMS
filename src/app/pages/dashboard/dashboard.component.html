@@ -1,5 +1,102 @@
-<div style="text-align:center">
-    <h2>{{ 'HELLO' | translate}}</h2>
-    <h2 [innerHTML]="'GOODBYE' | translate"></h2>
-    <div [translate]="'GOODBYE'"></div>
+<div class="container-fluid">
+    <div class="row  align-items-center justify-content-between">
+        <div class="col-md-6">
+            <div class="text-title">
+                {{'Dashboard' | translate}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <select class="form-select">
+                <option value="">Thailand</option>
+                <option value="">Thailand</option>
+                <option value="">Thailand</option>
+            </select>
+        </div>
+    </div>
+    <div class="row  justify-content-end">
+        <div class="col-md-auto mt-3">
+            <button class="btncancel">
+                <span class="material-symbols-outlined me-3">
+                    download
+                </span>
+                {{'Export' | translate}}</button>
+        </div>
+        <div class="col-md-auto mt-3">
+            <button class="btncancel">
+                <span class="material-symbols-outlined me-3">
+                    map
+                </span>
+                {{'View on Map' | translate}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-12 mt-0 title">
+                        {{'Merchant in Database' | translate}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        {{'New today' | translate}}
+                    </div>
+                    <div class="col-md-12 mt-3 text-title">
+                        {{9999 | number}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
+                        {{'This week' | translate}}
+                        <div class="text-title mt-3">
+                        {{9999 | number}}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
+                        {{'This month' | translate}}
+                        <div class="text-title mt-3">
+                        {{9999 | number}}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
+                        {{'This year' | translate}}
+                        <div class="text-title mt-3">
+                        {{9999 | number}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        {{'Total merchant' | translate}}
+                        <div class="text-title mt-3">
+                        {{99999 | number}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <a href="/database">View database
+                            <span class="material-symbols-outlined">
+                                navigate_next
+                                </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-12 mt-0 title">
+                        {{'Category' | translate}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
