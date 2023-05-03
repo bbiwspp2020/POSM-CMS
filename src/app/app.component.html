@@ -1,58 +1,104 @@
-<mat-toolbar>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <h3>VTHG POS System</h3>
-        <span style="font-size: 12px;">For Super Admin</span>
+<ng-container *ngIf="href != ''">
+  <mat-toolbar>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h3>VTHG POS System</h3>
+          <span style="font-size: 12px;">For Super Admin</span>
+        </div>
+        <div class="col d-flex align-items-center">
+          <input type="text" class="form-control" placeholder="{{ 'Search' | translate}}">
+        </div>
+        <div class="col d-flex align-items-center justify-content-end">
+          <button class="language pe-2" mat-button [matMenuTriggerFor]="language">
+            <div [translate]="'Language'"></div>
+          </button>
+          <mat-menu #language="matMenu">
+            <button (click)="changeLanguage('th')" mat-menu-item translate> TH </button>
+            <button (click)="changeLanguage('en')" mat-menu-item>EN</button>
+          </mat-menu>
+          <button class="profile" mat-button [matMenuTriggerFor]="menu">
+            <span class="material-symbols-outlined">
+              badge
+            </span>
+            <span class="ps-2 pe-2">Admin01</span>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div class="dropdown-profile">
+              <div class="d-flex align-items-center p-3">
+                <span class="material-symbols-outlined text-name">
+                  badge
+                </span>
+                <span class="ps-2 pe-2 text-name">Admin01 Admin01</span>
+              </div>
+              <div class="p-3 pt-0">
+                <span class="badge bg-dark">Super Admin</span>
+              </div>
+              <div class="p-3 pt-0">
+                <label>Email : example@mail.com</label>
+                <label>Phone : 0123456789</label>
+              </div>
+            </div>
+            <button mat-menu-item>Change password</button>
+            <button (click)="Logout()" mat-menu-item>Logout</button>
+          </mat-menu>
+        </div>
       </div>
-      <div class="col d-flex align-items-center">
-        <input type="text" class="form-control" placeholder="Search..">
-      </div>
-      <div class="col d-flex align-items-center justify-content-end">
-        <button class="language" mat-button [matMenuTriggerFor]="language">EN</button>
-        <mat-menu #language="matMenu">
-          <button mat-menu-item>TH</button>
-          <button mat-menu-item>EN</button>
-        </mat-menu>
-        <button class="profile" mat-button [matMenuTriggerFor]="menu">
+    </div>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <mat-list>
+        <a href="/dashboard">
+
+          <mat-list-item>
+            <span class="material-symbols-outlined">
+              leaderboard
+            </span>
+            <div [translate]="'Dashboard'"></div>
+          </mat-list-item>
+        </a>
+
+        <a href="/database">
+          <mat-list-item>
+            <span class="material-symbols-outlined">
+              description
+            </span>
+            <div [translate]="'Database'"></div>
+          </mat-list-item>
+        </a>
+
+        <mat-list-item>
+          <span class="material-symbols-outlined">
+            assignment
+          </span>
+          <div [translate]="'Form management'"></div>
+        </mat-list-item>
+        <mat-list-item>
           <span class="material-symbols-outlined">
             badge
           </span>
-          <span class="ps-2 pe-2">Admin01</span>
-          <mat-icon>keyboard_arrow_down</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <div class="dropdown-profile">
-            <div class="d-flex align-items-center p-3">
-              <span class="material-symbols-outlined text-name">
-                badge
-              </span>
-              <span class="ps-2 pe-2 text-name">Admin01 Admin01</span>
-            </div>
-            <div class="p-3 pt-0">
-              <span class="badge bg-dark">Super Admin</span>
-            </div>
-            <div class="p-3 pt-0">
-              <label>Email : example@mail.com</label>
-              <label>Phone : 0123456789</label>
-            </div>
-          </div>
-          <button mat-menu-item>Change password</button>
-          <button mat-menu-item>Logout</button>
-        </mat-menu>
-      </div>
-    </div>
-  </div>
-</mat-toolbar>
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
-    <mat-list>
-      <mat-list-item>Pepper</mat-list-item>
-      <mat-list-item>Salt</mat-list-item>
-      <mat-list-item>Paprika</mat-list-item>
-    </mat-list>
-  </mat-drawer>
-  <mat-drawer-content>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+          <div [translate]="'Admin management'"></div>
+        </mat-list-item>
+        <mat-list-item>
+          <span class="material-symbols-outlined">
+            history
+          </span>
+          <div [translate]="'Activity record'"></div>
+          </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+  <footer>
+    ©2023 Vathanagul group.co.ltd
+  </footer>
+</ng-container>
+<ng-container *ngIf="href == ''">
+  <app-login></app-login>
+</ng-container>

@@ -1,21 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 .form-control {
     border: 1px solid #388087;
     border-radius: 30px;
+    height: 50px;
 }
-.form-control:focus  {
+
+.form-control:focus {
     border: 1px solid #388087;
 }
 
 html,
 body {
-    height: 100vh
+    min-height: 100vh;
 }
 
-body {
-    margin: 0;
-    font-family: 'Athiti', sans-serif;
+* {
+    font-size: 18px;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.btnsave{
+    width: 100%;
+    height: 50px;
+    padding: 0px 10px;
+    border-radius: 40px;
+    border-color: #388087;
+    background-color: #388087;
+    color: #FFFFFF;
+}
