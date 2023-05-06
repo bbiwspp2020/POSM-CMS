@@ -22,14 +22,16 @@ export class AppComponent implements OnInit {
   language:any
   ngOnInit() {
     this.url = this.Location.path()
+    this.language = localStorage.getItem('selectedLanguage')
     this.language = this.translate
-    console.log(this.url == '/dashboard')
+    console.log(this.language)
   }
   title = 'POSM';
   Logout() {
     window.location.href = '/'
   }
   changeLanguage(lang: string) {
+    console.log(this.language)
     localStorage.setItem('selectedLanguage', this.language);
     this.translate.use(lang);
   }

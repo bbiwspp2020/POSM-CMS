@@ -8,12 +8,18 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class DatabaseComponent implements OnInit {
 
   constructor() { }
-
+  showmore: any = false
+  data: any = [
+    {id:"0000",Merchant:"Lala Restaurant",Date:"12/12/2023",Category:"Restaurant",Location:"Fashion Island",Country:"Thailand"}
+]
   ngOnInit(): void {
-    let range = new FormGroup({
-      start: new FormControl<Date | null>(null),
-      end: new FormControl<Date | null>(null),
-    });
+    for(let i = 0; i < 15;i++){
+    this.data.push({id:"001"+i,Merchant:"Lala Restaurant",Date:"12/12/2023",Category:"Restaurant",Location:"Fashion Island",Country:"Thailand"})
+    }
+  }
+
+  show() {
+    this.showmore = !this.showmore
   }
 
 }

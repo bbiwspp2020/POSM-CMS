@@ -20,6 +20,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -52,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     MatNativeDateModule,
     MatSliderModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

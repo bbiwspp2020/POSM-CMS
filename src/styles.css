@@ -26,11 +26,12 @@ body {
 }
 
 .btnsave{
-    width: 100%;
+    width: auto;
     height: 50px;
-    padding: 0px 10px;
+    padding: 0px 30px;
     border-radius: 40px;
     border-color: #388087;
+    border: 1px solid #388087;
     background-color: #388087;
     color: #FFFFFF;
 }

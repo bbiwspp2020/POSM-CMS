@@ -7,7 +7,12 @@
           <span style="font-size: 12px;">For Super Admin</span>
         </div>
         <div class="col d-flex align-items-center">
-          <input type="text" class="form-control" placeholder="{{ 'Search' | translate}}">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="{{ 'Search' | translate}}" aria-label="Username" aria-describedby="basic-addon1">
+            <span id="basic-addon1" class="material-symbols-outlined input-group-text">
+                search
+                </span>
+          </div>
         </div>
         <div class="col d-flex align-items-center justify-content-end">
           <button class="language pe-2" mat-button [matMenuTriggerFor]="language">

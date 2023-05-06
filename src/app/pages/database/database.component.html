@@ -5,8 +5,8 @@
                 {{'Database' | translate}}
             </div>
         </div>
-        <div class="col-md-6">
-            <select class="form-select">
+        <div class="col-md-6 d-flex justify-content-end">
+            <select class="form-select w-50">
                 <option value="">Thailand</option>
                 <option value="">Thailand</option>
                 <option value="">Thailand</option>
@@ -36,64 +36,259 @@
                 {{'View on Map' | translate}}</button>
         </div>
     </div>
-    <div class="row background">
-        <div class="col-md-4 mt-3">
-            <div class="select-item">
-                <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+    <div class="background p-3">
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <div class="select-item">
+                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                </div>
+                <input type="date" name="" id="" class="form-select mt-2">
             </div>
-            <input type="date" name="" id="" class="form-select mt-2">
-        </div>
-        <div class="col-md-4 mt-3">
-            <div class="select-item">
-                <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+            <div class="col-md-4 mt-3">
+                <div class="select-item">
+                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                </div>
+                <input type="date" name="" id="" class="form-select mt-2">
             </div>
-            <input type="date" name="" id="" class="form-select mt-2">
-        </div>
-        <div class="col-md-4 mt-3">
-            <div class="select-item">
-                <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+            <div class="col-md-4 mt-3">
+                <div class="select-item">
+                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                </div>
+                <select name="" id="" class="form-select mt-2">
+                    <option value="">1</option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                </select>
             </div>
-            <input type="date" name="" id="" class="form-select mt-2">
-        </div>
-        <div class="col-md-4 mt-3">
-            <div class="select-item">
-                <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+            <div class="col-md-4 mt-3">
+                <div class="select-item">
+                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                </div>
+                <input type="date" name="" id="" class="form-select mt-2">
             </div>
-            <input type="date" name="" id="" class="form-select mt-2">
-        </div>
-        <div class="col-md-4 mt-3">
-            <div class="select-item">
-                <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+            <div class="col-md-4 mt-3">
+                <div class="select-item">
+                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                </div>
+                <input type="date" name="" id="" class="form-select mt-2">
             </div>
-            <input type="date" name="" id="" class="form-select mt-2">
-        </div>
-        <div class="col-md-4 mt-3">
-            <div class="select-item">
-                <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+            <div class="col-md-4 mt-3">
+                <div class="select-item">
+                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                </div>
+                <input type="date" name="" id="" class="form-select mt-2">
             </div>
-            <input type="date" name="" id="" class="form-select mt-2">
         </div>
-        <div class="col-md-6 mt-3">
-            <div>
-                <input class="me-3" type="checkbox" name="" id=""> <span>Minimum spending (THB)</span>
+        <ng-container *ngIf="showmore">
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <div>
+                        <input class="me-3" type="checkbox" name="" id=""> <span>Minimum spending (THB)</span>
+                    </div>
+                    <mat-slider min="0" max="1000">
+                        <input matSliderStartThumb>
+                        <input matSliderEndThumb>
+                    </mat-slider>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div>
+                        <input class="me-3" type="checkbox" name="" id=""> <span>Surcharge (THB)</span>
+                    </div>
+                    <mat-slider min="1" max="5" step="0.5" value="1.5">
+                        <input matSliderStartThumb #itemHeight>
+                        <input matSliderEndThumb>
+                    </mat-slider>
+
+                    <label> {{itemHeight.value}} </label>
+
+                </div>
             </div>
-            <mat-slider min="0" max="1000">
-                <input  matSliderStartThumb>
-                <input  matSliderEndThumb>
-            </mat-slider>
-        </div>
-        <div class="col-md-6 mt-3">
-            <div>
-                <input class="me-3" type="checkbox" name="" id=""> <span>Surcharge (THB)</span>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <select name="" id="" class="form-select mt-2">
+                        <option value="">1</option>
+                        <option value="">1</option>
+                        <option value="">1</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
             </div>
-            <mat-slider min="1" max="5" step="0.5" value="1.5">
-                <input matSliderStartThumb #itemHeight>
-                <input  matSliderEndThumb>
-             </mat-slider>
-           
-             <label>  {{itemHeight.value}} </label>
-              
+            <div class="row">
+                <div class="col-md-12 mt-5">
+                    <div class="text-title">
+                        <h1>
+                            {{'Locaton' | translate}}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <select name="" id="" class="form-select mt-2">
+                        <option value="">1</option>
+                        <option value="">1</option>
+                        <option value="">1</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-5">
+                    <div class="text-title">
+                        <h1>
+                            {{'POSM Deployment' | translate}}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="select-item">
+                        <span>{{'Expand more filter' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    </div>
+                    <input type="date" name="" id="" class="form-select mt-2">
+                </div>
+            </div>
+        </ng-container>
+        <div class="row mt-5">
+            <div *ngIf="!showmore" class="col-md-6 d-flex align-items-center hover">
+                <span (click)="show()">{{'Expand more filter' | translate}}</span>
+                <span class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </div>
+            <div *ngIf="showmore" class="col-md-6 d-flex align-items-center hover">
+                <span (click)="show()">{{'Show less' | translate}}</span>
+                <span class="material-symbols-outlined">
+                    expand_less
+                </span>
+            </div>
+            <div class="col-md-6 mt-3 d-flex justify-content-end">
+                <button class="btnsave me-3 d-flex align-items-center">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                    Search</button>
+                <button class="btncancel">Clear filter</button>
+            </div>
         </div>
-       
+    </div>
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="text-title me-3">
+                {{'Result' | translate}}
+            </div>
+            <span class="badge"> {{10000 | number}} </span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+            <div class="input-group mb-3 w-50">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                <span id="basic-addon1" class="material-symbols-outlined input-group-text">
+                    search
+                </span>
+            </div>
+            <button class="btncancel ms-3" style="padding: 15px 15px !important;">
+                <span class="material-symbols-outlined">
+                    swap_vert
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-md-1 mt-3 d-flex justify-content-end">
+            <button class="delete">
+                <span class="material-symbols-outlined">
+                    delete
+                </span>
+                {{'Delete' | translate}}
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="w-100">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="" id="">
+                        </th>
+                        <th>{{'Data ID' | translate}}</th>
+                        <th>{{'Merchant name' | translate}}</th>
+                        <th>{{'Date rec.' | translate}}</th>
+                        <th>{{'Category' | translate}}</th>
+                        <th>{{'Location' | translate}}</th>
+                        <th>{{'Country' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let i of data">
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="" id="">
+                            </td>
+                            <td>{{i.id}}</td>
+                            <td>{{i.Merchant}}</td>
+                            <td>{{i.Date}}</td>
+                            <td>{{i.Category}}</td>
+                            <td>{{i.Location}}</td>
+                            <td>{{i.Country}}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

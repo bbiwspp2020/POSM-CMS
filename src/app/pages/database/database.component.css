@@ -6,11 +6,12 @@
 .select-item>span>u {
     cursor: pointer;
 }
+
 .select-item>span>u:hover {
     color: #388087;
 }
 
-.background{
+.background {
     background-color: #F8F8F8;
     border-radius: 20px;
     padding-top: 2em;
@@ -20,16 +21,86 @@
 
 mat-slider {
     width: 100%;
-  }
-  ::ng-deep .mat-slider.mat-accent .mat-slider-track-fill {
-    background-color: #388087    ; 
+}
+
+::ng-deep .mat-slider.mat-accent .mat-slider-track-fill {
+    background-color: #388087;
 }
 
 
-::ng-deep .mat-slider.mat-accent .mat-slider-thumb{
-    background-color: #388087; 
+::ng-deep .mat-slider.mat-accent .mat-slider-thumb {
+    background-color: #388087;
 }
 
 ::ng-deep .mat-slider.mat-accent .mat-slider-thumb-label {
-    background-color: #388087; 
+    background-color: #388087;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+.hover:hover {
+    color: #388087;
+}
+
+.badge {
+    background: var(--unnamed-color-def3f5) 0% 0% no-repeat padding-box;
+    background: #DEF3F5 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    color: black;
+    padding: 10px 15px;
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 0px solid;
+    color: red;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    background-color: #F8F8F8;
+}
+
+td {
+    border: solid 0px #000;
+    border-style: none solid solid none;
+    padding: 10px;
+}
+
+tr td {
+    border-radius: 10px;
+}
+
+tr td {
+    border-top-style: solid;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+.form-control {
+    border-right: none;
+}
+.input-group-text{
+    background-color: #FFFFFF;
+    border: 1px solid #388087;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+}
+
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
 }
