@@ -30,78 +30,227 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 col-lg-12 col-xl-6">
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-12 mt-0 title">
-                        {{'Merchant in Database' | translate}}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 mt-5">
-                        {{'New today' | translate}}
-                    </div>
-                    <div class="col-md-12 mt-3 text-title">
-                        {{9999 | number}}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
-                        {{'This week' | translate}}
-                        <div class="text-title mt-3">
-                        {{9999 | number}}
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-12 mt-0 title">
+                                {{'Merchant in Database' | translate}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mt-5">
+                                {{'New today' | translate}}
+                            </div>
+                            <div class="col-md-12 mt-3 text-title">
+                                {{9999 | number}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
+                                {{'This week' | translate}}
+                                <div class="text-title mt-3">
+                                    {{9999 | number}}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
+                                {{'This month' | translate}}
+                                <div class="text-title mt-3">
+                                    {{9999 | number}}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
+                                {{'This year' | translate}}
+                                <div class="text-title mt-3">
+                                    {{9999 | number}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mt-5">
+                                {{'Total merchant' | translate}}
+                                <div class="text-title mt-3">
+                                    {{99999 | number}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mt-5">
+                                <a href="/database">
+                                    {{'View database' | translate}}
+                                    <span class="material-symbols-outlined">
+                                        navigate_next
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
-                        {{'This month' | translate}}
-                        <div class="text-title mt-3">
-                        {{9999 | number}}
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-12 mt-0 title">
+                                {{'Location' | translate}}
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xxl-4 mt-4">
-                        {{'This year' | translate}}
-                        <div class="text-title mt-3">
-                        {{9999 | number}}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                    [xaxis]="chartOptions.xaxis" [title]="chartOptions.title"></apx-chart>
+                            </div>
+                            <div class="col-md-12">
+                                <table class="w-100">
+                                    <tbody>
+                                        <ng-container *ngFor="let i of data_bar_chart">
+                                            <tr>
+                                                <td><button class="border"></button></td>
+                                                <td>{{i.name}}</td>
+                                                <td>{{i.percen}}</td>
+                                                <td>{{i.totle}}</td>
+                                            </tr>
+                                        </ng-container>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 mt-5">
-                        {{'Total merchant' | translate}}
-                        <div class="text-title mt-3">
-                        {{99999 | number}}
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-12 mt-0 title">
+                                {{'Acquirer Bank' | translate}}
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 mt-5">
-                        <a href="/database">View database
-                            <span class="material-symbols-outlined">
-                                navigate_next
-                                </span>
-                        </a>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <apx-chart [series]="bar_chart.series" [chart]="bar_chart.chart"
+                                    [dataLabels]="bar_chart.dataLabels" [plotOptions]="bar_chart.plotOptions"
+                                    [yaxis]="bar_chart.yaxis" [xaxis]="bar_chart.xaxis"
+                                    [legend]="bar_chart.legend" [colors]="bar_chart.colors"
+                                    [grid]="bar_chart.grid" [labels]="bar_chart.labels"
+                                    [responsive]="bar_chart.responsive"></apx-chart>
+                            </div>
+                            <div class="col-md-12">
+                                <table class="w-100">
+                                    <tbody>
+                                        <ng-container *ngFor="let i of data_bar_chart">
+                                            <tr>
+                                                <td><button class="border"></button></td>
+                                                <td>{{i.name}}</td>
+                                                <td>{{i.percen}}</td>
+                                                <td>{{i.totle}}</td>
+                                            </tr>
+                                        </ng-container>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-12 col-lg-12 col-xl-6">
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-12 mt-0 title">
-                        {{'Category' | translate}}
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-12 mt-0 title">
+                            {{'Category' | translate}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                [xaxis]="chartOptions.xaxis" [title]="chartOptions.title"></apx-chart>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="w-100">
+                                <tbody>
+                                    <ng-container *ngFor="let i of data_bar_chart">
+                                        <tr>
+                                            <td><button class="border"></button></td>
+                                            <td>{{i.name}}</td>
+                                            <td>{{i.percen}}</td>
+                                            <td>{{i.totle}}</td>
+                                        </tr>
+                                    </ng-container>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <apx-chart
-                        [series]="chartOptions.series"
-                        [chart]="chartOptions.chart"
-                        [xaxis]="chartOptions.xaxis"
-                        [title]="chartOptions.title"
-                      ></apx-chart>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-12 mt-0 title">
+                            {{'Card Acceptance' | translate}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <apx-chart [series]="bar_chart.series" [chart]="bar_chart.chart"
+                                [dataLabels]="bar_chart.dataLabels" [plotOptions]="bar_chart.plotOptions"
+                                [yaxis]="bar_chart.yaxis" [xaxis]="bar_chart.xaxis"
+                                [legend]="bar_chart.legend" [colors]="bar_chart.colors"
+                                [grid]="bar_chart.grid" [labels]="bar_chart.labels"
+                                [responsive]="bar_chart.responsive"></apx-chart>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="w-100">
+                                <tbody>
+                                    <ng-container *ngFor="let i of data_bar_chart">
+                                        <tr>
+                                            <td><button class="border"></button></td>
+                                            <td>{{i.name}}</td>
+                                            <td>{{i.percen}}</td>
+                                            <td>{{i.totle}}</td>
+                                        </tr>
+                                    </ng-container>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-12 mt-0 title">
+                            {{'Material Deploy' | translate}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <apx-chart [series]="bar_chart.series" [chart]="bar_chart.chart"
+                                [dataLabels]="bar_chart.dataLabels" [plotOptions]="bar_chart.plotOptions"
+                                [yaxis]="bar_chart.yaxis" [xaxis]="bar_chart.xaxis"
+                                [legend]="bar_chart.legend" [colors]="bar_chart.colors"
+                                [grid]="bar_chart.grid" [labels]="bar_chart.labels"
+                                [responsive]="bar_chart.responsive"></apx-chart>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="w-100">
+                                <tbody>
+                                    <ng-container *ngFor="let i of data_bar_chart">
+                                        <tr>
+                                            <td><button class="border"></button></td>
+                                            <td>{{i.name}}</td>
+                                            <td>{{i.percen}}</td>
+                                            <td>{{i.totle}}</td>
+                                        </tr>
+                                    </ng-container>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
     </div>
 </div>

@@ -22,4 +22,8 @@ export class DatabaseComponent implements OnInit {
     this.showmore = !this.showmore
   }
 
+  addpage(){
+    window.location.href='/add-merchant'
+  }
+
 }

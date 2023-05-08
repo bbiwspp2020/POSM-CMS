@@ -16,12 +16,61 @@
     "This month":"This month",
     "This year":"This year",
     "Total merchant":"Total merchant",
+    "View database":"View database",
 
     "Category":"Category",
+    "Card Acceptance":"Card Acceptance",
+    "Acquirer Bank":"Acquirer Bank",
+    "Material Deploy":"Material Deploy",
 
 
     "Add Merchant":"Add Merchant",
     "Date range":"Date range",
-    "Clear":"Clear"
+    "Clear":"Clear",
+    "QR Payment":"QR Payment",
+    "E-Wallet":"E-Wallet",
+    "Contactless acceptance":"Contactless acceptance",
 
+    "Minimum spending (THB)":"Minimum spending (THB)",
+    "Surcharge (THB)":"Surcharge (THB)",
+    
+    "EDC Bank":"EDC Bank",
+    "EDC Status":"EDC Status",
+    "EDC Place":"EDC Place",
+    "Staff Performance":"Staff Performance",
+
+    "Location":"Location",
+    "Street":"Street",
+    "District":"District",
+    "Province":"Province",
+    "Zipcode":"Zipcode",
+
+    "POSM Deployment":"POSM Deployment",
+    "Material":"Material",
+    "Competitors Info":"Competitors Info",
+    "Expand more filter":"Expand more filter",
+    "Show less":"Show less",
+    "Clear filter":"Clear filter",
+
+    "Result":"Result",
+    "Data ID":"Data ID",
+    "Merchant name":"Merchant name",
+    "Date rec.":"Date rec.",
+    "Country":"Country",
+
+    "Merchant Detail":"Merchant Detail",
+    "Fill merchant name":"Fill merchant name",
+    "Fill new category name":"Fill new category name",
+
+    "Location (Shopping mall, Building, Market, etc.)":"Location (Shopping mall, Building, Market, etc.)",
+    "Fill new location name":"Fill new location name",
+    "This Merchant are on street (Not in any Shopping mall, Building, Market, etc.)":"This Merchant are on street (Not in any Shopping mall, Building, Market, etc.)",
+    "Shop phone number":"Shop phone number",
+    "Floor":"Floor",
+    "Google Map link":"Google Map link",
+
+    "Contact":"Contact",
+    "Phone number":"Phone number",
+    "Email":"Email",
+    "FAX":"FAX"
   }

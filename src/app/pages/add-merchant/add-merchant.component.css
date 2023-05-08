@@ -1,0 +1,12 @@
+a{
+    text-decoration: none;
+    color: #505050;
+}
+
+a:hover{
+    color: #388087;
+}
+
+.col-md-12{
+    margin-bottom: 1em;
+}

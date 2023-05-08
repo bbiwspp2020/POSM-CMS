@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { AddMerchantComponent } from './pages/add-merchant/add-merchant.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    DatabaseComponent
+    DatabaseComponent,
+    AddMerchantComponent
   ],
   imports: [
     BrowserModule,

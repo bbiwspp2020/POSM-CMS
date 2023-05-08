@@ -65,3 +65,20 @@ body {
     font-size: 33px;
     color: #505050;
 }
+
+.background {
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 2em 0;
+}
+
+.input-group-text{
+    background-color: #FFFFFF;
+    border: 1px solid #388087;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+}

@@ -22,7 +22,7 @@
                 {{'Export' | translate}}</button>
         </div>
         <div class="col-md-auto mt-3">
-            <button class="btncancel">
+            <button class="btncancel" (click)="addpage()">
                 <span class="material-symbols-outlined me-3">
                     add
                 </span>
@@ -46,13 +46,13 @@
             </div>
             <div class="col-md-4 mt-3">
                 <div class="select-item">
-                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    <span>{{'Category' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                 </div>
                 <input type="date" name="" id="" class="form-select mt-2">
             </div>
             <div class="col-md-4 mt-3">
                 <div class="select-item">
-                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    <span>{{'Card acceptance' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                 </div>
                 <select name="" id="" class="form-select mt-2">
                     <option value="">1</option>
@@ -62,19 +62,19 @@
             </div>
             <div class="col-md-4 mt-3">
                 <div class="select-item">
-                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    <span>{{'QR Payment' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                 </div>
                 <input type="date" name="" id="" class="form-select mt-2">
             </div>
             <div class="col-md-4 mt-3">
                 <div class="select-item">
-                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    <span>{{'E-Wallet' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                 </div>
                 <input type="date" name="" id="" class="form-select mt-2">
             </div>
             <div class="col-md-4 mt-3">
                 <div class="select-item">
-                    <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                    <span>{{'Contactless acceptance' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                 </div>
                 <input type="date" name="" id="" class="form-select mt-2">
             </div>
@@ -83,7 +83,9 @@
             <div class="row">
                 <div class="col-md-6 mt-3">
                     <div>
-                        <input class="me-3" type="checkbox" name="" id=""> <span>Minimum spending (THB)</span>
+                        <input class="me-3" type="checkbox" name="" id=""> <span>
+                            {{'Minimum spending (THB)' | translate}}
+                            </span>
                     </div>
                     <mat-slider min="0" max="1000">
                         <input matSliderStartThumb>
@@ -92,7 +94,10 @@
                 </div>
                 <div class="col-md-6 mt-3">
                     <div>
-                        <input class="me-3" type="checkbox" name="" id=""> <span>Surcharge (THB)</span>
+                        <input class="me-3" type="checkbox" name="" id=""> <span>
+                            {{'Surcharge (THB)' | translate}}
+                            
+                            </span>
                     </div>
                     <mat-slider min="1" max="5" step="0.5" value="1.5">
                         <input matSliderStartThumb #itemHeight>
@@ -106,19 +111,19 @@
             <div class="row">
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'EDC Bank' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'EDC Status' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'EDC Place' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <select name="" id="" class="form-select mt-2">
                         <option value="">1</option>
@@ -128,7 +133,7 @@
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Staff Performance' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
@@ -137,7 +142,7 @@
                 <div class="col-md-12 mt-5">
                     <div class="text-title">
                         <h1>
-                            {{'Locaton' | translate}}
+                            {{'Location' | translate}}
                         </h1>
                     </div>
                 </div>
@@ -145,19 +150,19 @@
             <div class="row">
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Location' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Street' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'District' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <select name="" id="" class="form-select mt-2">
                         <option value="">1</option>
@@ -167,13 +172,13 @@
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Province' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Zipcode' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
@@ -190,13 +195,13 @@
             <div class="row">
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Date range' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Material' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
                 <div class="col-md-4 mt-3">
                     <div class="select-item">
-                        <span>{{'Expand more filter' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
+                        <span>{{'Competitors Info' | translate}}</span> <span> <u>{{'Clear' | translate}}</u> </span>
                     </div>
                     <input type="date" name="" id="" class="form-select mt-2">
                 </div>
@@ -220,8 +225,10 @@
                     <span class="material-symbols-outlined">
                         search
                     </span>
-                    Search</button>
-                <button class="btncancel">Clear filter</button>
+                    {{'Search' | translate}}</button>
+                <button class="btncancel">
+                    {{'Clear filter' | translate}}
+                    </button>
             </div>
         </div>
     </div>
@@ -234,7 +241,7 @@
         </div>
         <div class="col-md-6 d-flex justify-content-end">
             <div class="input-group mb-3 w-50">
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                <input type="text" class="form-control" placeholder="{{'Search' | translate}}" aria-label="Username"
                     aria-describedby="basic-addon1">
                 <span id="basic-addon1" class="material-symbols-outlined input-group-text">
                     search

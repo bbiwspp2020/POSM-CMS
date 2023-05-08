@@ -16,13 +16,96 @@
     "This month":"เดือน",
     "This year":"ปี",
     "Total merchant":"ผู้ค้าทั้งหมด",
+    "View database":"ดูฐานข้อมูล",
 
     "Category":"หมวดหมู่",
+    "Card Acceptance":"รับบัตร",
+    "Acquirer Bank":"ธนาคารผู้รับเงิน",
+    "Material Deploy":"การปรับใช้วัสดุ",
 
 
     "Add Merchant":"เพิ่มร้านค้า",
     "Date range":"วันที่",
-    "Clear":"ล้าง"
+    "Clear":"ล้าง",
+    "QR Payment":"คิวอาร์ เพย์เม้นท์",
+    "E-Wallet":"อี-วอลเล็ท",
+    "Contactless acceptance":"การยอมรับแบบไม่ต้องสัมผัส",
+
+    "Minimum spending (THB)":"ยอดใช้จ่ายขั้นต่ำ (บาท)",
+    "Surcharge (THB)":"ค่าบริการเพิ่มเติม (บาท)",
+
+    "EDC Bank":"อีดีซี ธนาคาร",
+    "EDC Status":"สถานะ EDC",
+    "EDC Place":"อีดีซีเพลส",
+    "Staff Performance":"การปฏิบัติงานของพนักงาน",
+
+    "Location":"ที่ตั้ง",
+    "Street":"ถนน",
+    "District":"ตำบล",
+    "Province":"จังหวัด",
+    "Zipcode":"รหัสไปรษณีย์",
+
+    "POSM Deployment":"การปรับใช้ POSM",
+    "Material":"วัสดุ",
+    "Competitors Info":"ข้อมูลคู่แข่ง",
+    "Expand more filter":"ขยายตัวกรองเพิ่มเติม",
+    "Show less":"แสดงน้อยลง",
+    "Clear filter":"ล้างตัวกรอง",
+
+    "Result":"ผลลัพธ์",
+    "Data ID":"รหัสข้อมูล",
+    "Merchant name":"ชื่อผู้ค้า",
+    "Date rec.":"บันทึกวันที่",
+    "Country":"ประเทศ",
+
+    "Merchant Detail":"รายละเอียดร้านค้า",
+    "Fill merchant name":"กรอกชื่อร้านค้า",
+    "Fill new category name":"กรอกชื่อหมวดหมู่ใหม่",
+
+    "Location (Shopping mall, Building, Market, etc.)":"ที่ตั้ง (ห้างสรรพสินค้า อาคาร ตลาด ฯลฯ)",
+    "Fill new location name":"กรอกชื่อสถานที่ใหม่",
+    "This Merchant are on street (Not in any Shopping mall, Building, Market, etc.)":"ร้านค้านี้อยู่บนถนน (ไม่ใช่ในห้างสรรพสินค้า อาคาร ตลาด ฯลฯ)",
+    "Shop phone number":"เบอร์โทรร้าน",
+    "Floor":"ชั้น",
+    "Google Map link":"ลิงค์ Google Map",
+
+    "Contact":"ติดต่อ",
+    "Phone number":"หมายเลขโทรศัพท์",
+    "Email":"อีเมล",
+    "FAX":"แฟกซ์"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

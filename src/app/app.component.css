@@ -93,11 +93,3 @@ a{
 .form-control {
     border-right: none;
 }
-.input-group-text{
-    background-color: #FFFFFF;
-    border: 1px solid #388087;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    display: flex;
-    align-items: center;
-}

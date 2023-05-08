@@ -21,3 +21,9 @@ a {
 a:hover{
     color: #388087;
 }
+.border{
+    width: 10px;
+    height: 10px;
+    background-color: #388087;
+    border-radius: 50%;
+}
