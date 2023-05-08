@@ -5,6 +5,7 @@
     border-radius: 30px;
     height: 50px;
 }
+
 .form-select {
     border: 1px solid #388087;
     border-radius: 30px;
@@ -25,7 +26,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.btnsave{
+.btnsave {
     width: auto;
     height: 50px;
     padding: 0px 30px;
@@ -36,7 +37,7 @@ body {
     color: #FFFFFF;
 }
 
-.btncancel{
+.btncancel {
     width: auto;
     height: 50px;
     padding: 0px 30px;
@@ -48,19 +49,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-.btncancel:hover{
+
+.btncancel:hover {
     border: 1px solid #ffffff;
     background-color: #388087;
     color: #ffffff;
 }
 
-.text-title{
+.text-title {
     font-weight: 600;
     color: #505050;
     font-size: 40px;
 }
 
-.title{
+.title {
     font-weight: 600;
     font-size: 33px;
     color: #505050;
@@ -74,7 +76,7 @@ body {
     margin: 2em 0;
 }
 
-.input-group-text{
+.input-group-text {
     background-color: #FFFFFF;
     border: 1px solid #388087;
     border-top-right-radius: 40px;
@@ -82,3 +84,55 @@ body {
     display: flex;
     align-items: center;
 }
+/* input select */
+.multiselect-dropdown .dropdown-btn {
+    display: inline-block !important;
+    width: 100% !important;
+    border: 1px solid #388087 !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    padding: 12px 12px !important;
+    margin-top: 10px !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    background-image: none !important;
+    background-color: white;
+}
+/* button */
+.multiselect-dropdown .dropdown-btn .selected-item-container .selected-item {
+    border: 1px solid #388087 !important;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background: #388087 !important;
+    padding: 5px 5px !important;
+    color: #fff;
+    border-radius: 12px !important;
+    float: left;
+}
+
+/* arrow */
+.multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+    line-height: 16px;
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 40px;
+    height: 38px;
+    right: 1px;
+    top: 20px !important;
+    padding: 8px 8px !important;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+
+.modal-backdrop {
+    z-index: 0 !important;
+  }

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -22,6 +22,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AddMerchantComponent } from './pages/add-merchant/add-merchant.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -37,6 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
@@ -56,6 +58,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatNativeDateModule,
     MatSliderModule,
     MatAutocompleteModule,
+    NgMultiSelectDropDownModule.forRoot()
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

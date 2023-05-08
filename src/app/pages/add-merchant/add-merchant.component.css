@@ -1,12 +1,43 @@
-a{
+a {
     text-decoration: none;
     color: #505050;
 }
 
-a:hover{
+a:hover {
     color: #388087;
 }
 
-.col-md-12{
+.col-md-12 {
     margin-bottom: 1em;
+}
+
+.dropimage {
+    border: 2px dashed;
+    color: #388087;
+    border-radius: 30px;
+    margin: 1em;
+}
+
+.addphoto {
+    box-shadow: 0px 0px 8px #00000029;
+    border-radius: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.wrapper{
+    border: 1px solid #388087;
+    padding: 10px 10px;
+    border-radius: 35px;
+    background-color: #FFFFFF;
+    margin-left: 1em;
+}
+
+.wrapper button {
+    border: none;
+    background-color: #FFFFFF;
 }

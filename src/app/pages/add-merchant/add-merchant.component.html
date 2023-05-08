@@ -123,11 +123,13 @@
             <div class="col-md-12 mt-2">
                 <span>{{'Google Map link'|translate}}*</span>
                 <div class="input-group mt-2">
-                    <input style="border-right: none;" type="text" class="form-control" placeholder="{{'Google Map link'|translate}}" aria-label="Username" aria-describedby="Google-Map-link">
+                    <input style="border-right: none;" type="text" class="form-control"
+                        placeholder="{{'Google Map link'|translate}}" aria-label="Username"
+                        aria-describedby="Google-Map-link">
                     <span id="Google-Map-link" class="material-symbols-outlined input-group-text">
-                            map
-                        </span>
-                  </div>
+                        map
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -165,6 +167,414 @@
                     {{'FAX'|translate}}
                 </span>
                 <input type="text" class="form-control mt-2" placeholder="{{'FAX'|translate}}">
+            </div>
+        </div>
+    </div>
+    <div class="background  p-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-title">
+                    {{'Type of Payment'|translate}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <span>
+                    {{'Card Acceptance' | translate}}
+                </span>
+                <ng-multiselect-dropdown [placeholder]="'Select card'" [settings]="dropdownSettings"
+                    [data]="dropdownList" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                </ng-multiselect-dropdown>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <span>
+                    {{'Minimum spending' | translate}}
+                </span>
+                <input type="text" class="form-control mt-2" placeholder="{{'Minimum spending' | translate}}">
+                <div class="mt-2">
+                    <input type="checkbox" name="" id=""> <span>
+                        {{'No Minimum spending' | translate}}
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <span>
+                    {{'Surchange' | translate}}
+                </span>
+                <input type="text" class="form-control mt-2" placeholder="{{'Surchange' | translate}}">
+                <div class="mt-2">
+                    <input type="checkbox" name="" id=""> <span>
+                        {{'No Surchange' | translate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <span>
+                    {{'QR Pay' | translate}}
+                </span>
+                <ng-multiselect-dropdown [placeholder]="'Select Platform'" [settings]="dropdownSettings"
+                    [data]="dropdownList" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                </ng-multiselect-dropdown>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-2">
+                <span>
+                    {{'E-Wallet' | translate}}
+                </span>
+                <ng-multiselect-dropdown [placeholder]="'Select E-Wallet'" [settings]="dropdownSettings"
+                    [data]="dropdownList" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                </ng-multiselect-dropdown>
+            </div>
+        </div>
+    </div>
+    <div class="background p-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-title">
+                    {{'EDC Terminal' | translate}}
+                </div>
+            </div>
+        </div>
+        <ng-container *ngFor="let i of data">
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <span>
+                        {{'Bank name' | translate}}
+                    </span>
+                    <select class="form-select mt-2">
+                        <option selected>
+                            {{'Select Bank' | translate}}
+                        </option>
+                        <option value="">1</option>
+                        <option value="">1</option>
+                        <option value="">1</option>
+                        <option value="">1</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <span>
+                        {{'Terminal ID' | translate}}
+                    </span>
+                    <input type="text" class="form-control mt-2" placeholder="{{'Terminal ID' | translate}}">
+                </div>
+            </div>
+        </ng-container>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <button class="btncancel w-100" (click)="Add_EDC()">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                    {{'Add EDC'| translate}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="background p-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-title">
+                    {{'EDC/Sraff Status' | translate}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4 d-flex justify-content-between align-items-center">
+                <span>
+                    {{'Normal EDC'|translate}}
+                </span>
+                <select class="form-select w-25">
+                    <option value="">Not ready</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <select class="form-select mt-4">
+                    <option value="">Select Bank</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span>
+                    {{'Issue remark'|translate}}
+                </span>
+                <textarea placeholder="{{'Issue remark...'|translate}}" style="height: 200px !important;" rows="10"
+                    class="form-control mt-2"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span>
+                    {{'Issue Photo'|translate}}
+                </span>
+            </div>
+        </div>
+        <div class="row dropimage p-3">
+            <div class="col-md-12 text-center">
+                <span>
+                    {{'Drag photo here or'|translate}}
+                </span>
+            </div>
+            <div class="col-md-12 text-center d-flex justify-content-center">
+                <button class="btnsave d-flex align-items-center">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                    <span>
+                        {{'Browse photo'|translate}}
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4 d-flex justify-content-between">
+                <span>
+                    {{'Contactless Acceptance'|translate}}
+                </span>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4 d-flex justify-content-between align-items-center">
+                <span>
+                    {{'Contactless EDC'|translate}}
+                </span>
+                <select class="form-select w-25 mt-2">
+                    <option value="">Not ready</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <select class="form-select mt-2">
+                    <option selected>
+                        {{'Select Bank' | translate}}
+                    </option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span>
+                    {{'Issue remark'|translate}}
+                </span>
+                <textarea placeholder="{{'Issue remark...'|translate}}" style="height: 200px !important;" rows="10"
+                    class="form-control mt-2"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span>
+                    {{'Issue Photo'|translate}}
+                </span>
+            </div>
+        </div>
+        <div class="row dropimage p-3">
+            <div class="col-md-12 text-center">
+                <span>
+                    {{'Drag photo here or'|translate}}
+                </span>
+            </div>
+            <div class="col-md-12 text-center d-flex justify-content-center">
+                <button class="btnsave d-flex align-items-center">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                    <span>
+                        {{'Browse photo'|translate}}
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4 d-flex justify-content-between align-items-center">
+                <span>
+                    {{'EDC Placement (for Contactless only)'|translate}}
+                </span>
+                <select class="form-select w-25 mt-2">
+                    <option value="">Not ready</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-2 d-flex justify-content-between align-items-center">
+                <span>
+                    {{'Staff performance (for Contactless only)'|translate}}
+                </span>
+                <select class="form-select w-25 mt-2">
+                    <option value="">Not ready</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="background p-3">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="text-title">
+                    {{'POSM Deployment'|translate}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <span>
+                    {{'Visa' | translate}}
+                </span>
+                <button class="addphoto mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    {{'Add Photo'}}
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="text-title">
+                    {{'Competitor info'|translate}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <select class="form-select w-25">
+                    <option value="">
+                        Mastercard
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-2">
+                <button class="addphoto mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    {{'Add Photo'}}
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btncancel w-100">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                    {{'Material Deploy'|translate}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btnsave">
+                {{'Add Merchant'|translate}}
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-3">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                    <h1 class="modal-title" id="staticBackdropLabel">EDC</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="background p-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>
+                            {{'Signing Pad'|translate}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row dropimage p-3">
+                    <div class="col-md-12 text-center">
+                        <span>
+                            {{'Drag photo here or'|translate}}
+                        </span>
+                    </div>
+                    <div class="col-md-12 text-center d-flex justify-content-center">
+                        <button class="btnsave d-flex align-items-center">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                            <span>
+                                {{'Browse photo'|translate}}
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-center">
+                        <span>
+                            {{'Material Quantity'|translate}}
+                        </span>
+                        <div class="wrapper">
+                            <button class="plusminus" (click)="handleMinus()">-</button>
+                            {{value}}
+                            <button class="plusminus" (click)="handlePlus()">+</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background p-3 mt-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>
+                            {{'Signing Pad'|translate}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row dropimage p-3">
+                    <div class="col-md-12 text-center">
+                        <span>
+                            {{'Drag photo here or'|translate}}
+                        </span>
+                    </div>
+                    <div class="col-md-12 text-center d-flex justify-content-center">
+                        <button class="btnsave d-flex align-items-center">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                            <span>
+                                {{'Browse photo'|translate}}
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-center">
+                        <span>
+                            {{'Material Quantity'|translate}}
+                        </span>
+                        <div class="wrapper">
+                            <button class="plusminus" (click)="handleMinus()">-</button>
+                            {{value}}
+                            <button class="plusminus" (click)="handlePlus()">+</button>
+                          </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
