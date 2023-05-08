@@ -25,5 +25,8 @@ export class DatabaseComponent implements OnInit {
   addpage(){
     window.location.href='/add-merchant'
   }
+  viewmap(){
+    window.location.href='/view-on-map'
+  }
 
 }

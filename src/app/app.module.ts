@@ -23,6 +23,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AddMerchantComponent } from './pages/add-merchant/add-merchant.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { ViewOnMapComponent } from './pages/view-on-map/view-on-map.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -32,7 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     DashboardComponent,
     DatabaseComponent,
-    AddMerchantComponent
+    AddMerchantComponent,
+    ViewOnMapComponent
   ],
   imports: [
     BrowserModule,
